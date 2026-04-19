@@ -11,8 +11,7 @@ st.markdown("---")
 # 2. Modeli Yükle (Pro modelini kullanıyoruz)
 @st.cache_resource
 def load_my_model():
-    return tf.keras.models.load_model('dis_modeli_pro.h5')
-
+   return tf.keras.models.load_model('dis_modeli_pro.h5', compile=False)
 model = load_my_model()
 
 # 3. Fotoğraf Yükleme Alanı
